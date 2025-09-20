@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="TODO">
-  <meta name="keywords" content="TODO">
+        content="Our method proposes using scene graph as an effective and interpretable way of data representation for skill composition, improving the compositional generality for solving long-horizon manipulation tasks.">
+  <meta name="keywords" content="Robot Learning: Model Learning, Robot Planning, Robot Learning: Imitation Learning, Perceptual Learning, Skill Composition, Diffusion Policy">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Compose by Focus: Scene Graph-based Atomic Skills</title>
 
@@ -51,7 +51,7 @@
               <a href="https://han20192019.github.io/">Han Qi</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://computationalrobotics.seas.harvard.edu/GPC/">Changhe Chen</a><sup>1</sup>,
+              <a href="https://aisenginn.github.io/">Changhe Chen</a><sup>2</sup>,
             </span>
             <span class="author-block">
               <a href="https://hankyang.seas.harvard.edu/">Heng Yang</a><sup>1</sup>
@@ -62,6 +62,9 @@
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <sup>1</sup>School of Engineering and Applied Sciences, Harvard University
+            </span><br>
+            <span class="author-block">
+              <sup>1</sup>Robotics Department, University of Michigan
             </span><br>
             <!-- <span class="author-block">
               <sup>&dagger;</sup>Work done during visit at the 
@@ -84,7 +87,7 @@
                 </a>
               </span> -->
               <span class="link-block">
-                <a href="https://computationalrobotics.seas.harvard.edu/GPC/"
+                <a href="https://computationalrobotics.seas.harvard.edu/SkillComposition/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -129,6 +132,149 @@
       </div>
     </div>
   </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            A key requirement for generalist robots is compositional generalization—the ability to combine atomic skills to solve complex, long-horizon tasks. While prior work has primarily focused on synthesizing a planner that sequences pre-learned skills, robust execution of the individual skills themselves remains challenging, as visuomotor policies often fail under distribution shifts induced by scene composition. To address this, we introduce a scene graph-based representation that focuses on task-relevant objects and relations, thereby mitigating sensitivity to irrelevant variation. Building on this idea, we develop a scene-graph skill learning framework that integrates graph neural networks with diffusion-based imitation learning, and further combine “focused” scene-graph skills with a vision-language model (VLM) based task planner. Experiments in both simulation and real-world manipulation tasks demonstrate substantially higher success rates than state-of-the-art baselines, highlighting improved robustness and compositional generalization in long-horizon tasks.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Abstract. -->
+
+  </div>
+</section>
+
+
+<!-- Overview. -->
+<div class="content is-centered is-full-width has-text-centered">
+  <img src="./static/images/mainfigure_v2.png" width="65%">
+</div>
+<!-- Overview. -->
+
+
+<!-- Realworld Evaluation. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Real world experiment - Tool usage</h2>
+
+    <div class="columns">
+      <div class="column is-centered">
+        <div class="content has-text-centered">
+          <video id="Sort by color" autoplay controls muted playsinline>
+            <source src="./static/videos/tool_realworld.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <!-- Realworld Evaluation -->
+  </div>
+</section> 
+<!-- Realworld Evaluation. -->
+
+
+
+<!-- Realworld Evaluation. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Real world experiment - Vegetable picking</h2>
+
+    <!-- Realworld Evaluation -->
+    <div class="columns">
+      <div class="column is-centered">
+        <div class="content has-text-centered">
+          <video id="Cube out and in" autoplay controls muted playsinline>
+            <source src="./static/videos/veg_realworld.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+  
+    <!-- Realworld Evaluation -->
+  </div>
+</section> 
+<!-- Realworld Evaluation. -->
+
+
+
+<!-- Simulation Evaluation. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Simulation experiments</h2>
+
+    <!-- Simulation Evaluation -->
+    <div class="columns">
+      <div class="column is-centered">
+        <div class="content has-text-centered">
+          <video id="Cube out and in" autoplay controls muted playsinline>
+            <source src="./static/videos/sim1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column is-centered">
+        <div class="content has-text-centered">
+          <video id="Sort by color" autoplay controls muted playsinline>
+            <source src="./static/videos/sim2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column is-centered">
+        <div class="content has-text-centered">
+          <video id="Blocks stacking game" autoplay controls muted playsinline>
+            <source src="./static/videos/sim3.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column is-centered">
+        <div class="content has-text-centered">
+          <video id="Tools usage" autoplay controls muted playsinline>
+            <source src="./static/videos/sim4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>    
+    </div>  
+
+    <div class="columns">
+      <div class="column is-centered">
+        <div class="content has-text-centered">
+          <video id="Obstacle Avoidance" autoplay controls muted playsinline>
+            <source src="./static/videos/sim5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>    
+    </div>
+    <!-- Simulation Evaluation -->
+  </div>
+</section> 
+<!-- Simulation Evaluation. -->
+
+
+
 
 <footer class="footer">
   <div class="container">
